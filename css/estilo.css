@@ -1,0 +1,24 @@
+h1{
+    color:#616363;
+}
+#center{
+    margin-top:150px;
+    margin-left:20px;
+}
+#center-search{
+    margin-top:20px;
+    margin-left:35px;
+}
+#center-list{
+    margin-top:5px;
+}
+
+#Back{
+    margin-top:10px;
+    margin-left:10px;
+    color: #c6c8c8;
+    font-size: 0.9em;
+}
+#Back:hover{
+    color: white;
+}
