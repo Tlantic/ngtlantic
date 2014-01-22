@@ -5,14 +5,17 @@
         <link rel ="stylesheet" type="text/css" href="css/estilo.css">
     </head>
     <body ng-controller="rootController">
-        
+        <div id="center">
+            <button class="topcoat-button" ng-click='goTo("/search")'>Pesquisar</button>
+            <button class="topcoat-button" ng-click='goTo("/list")'>Listar Produtos</button>
+        </div>
         <ng-view></ng-view>
         
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="js/App.js"></script>
         <script src="js/rootController.js"></script>
-        <script src="js/homeController.js"></script>
+        <!--<script src="js/homeController.js"></script>-->
         <script src="js/listController.js"></script>
         <script src="js/searchController.js"></script>
         <script src="js/resultController.js"></script>
