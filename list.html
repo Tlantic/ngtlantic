@@ -1,10 +1,10 @@
 <h4 id="Back" ng-click='goTo("/home")'>Back</h4>
-<div id="center-list">
+<div id="list">
 <div class="topcoat-list">
         <h3 class="topcoat-list__header">Products</h3>
         <ul class="topcoat-list__container">
             <li class="topcoat-list__item" ng-repeat="item in itemList">
-                <span ng-bind="item.name"></span>
+                <span ng-bind="item._source.Name"></span>
             </li>
         </ul>
     </div>

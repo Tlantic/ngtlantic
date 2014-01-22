@@ -7,12 +7,12 @@ angular.module('ngtlantic').controller("ListController", ["$scope","$http", func
     
     console.log('Loading data from file....');
     
-    $http.get('data/items.json')
+    $http.get('http://10.51.100.5:9200/salesptpt/items/_search?size=50')
     
     .success(function (stuff) {
         console.debug('Success reading file!', stuff);
         
-        $scope.itemList = stuff.result;
+        $scope.itemList = stuff.hits.hits;
     })
     
     .error(function () {
