@@ -3,6 +3,7 @@
 angular.module('ngtlantic').controller("ListController", ["$scope","$http", function ($scope, $http) {
     'use strict';
     
+    $scope.title=" First 50 items from server";
     $scope.itemList = [];
     
     console.log('Loading data from file....');
