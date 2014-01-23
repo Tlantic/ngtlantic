@@ -5,14 +5,16 @@ angular.module('ngtlantic').controller("ListController", ["$scope", "serviceProd
     
     $scope.title=" First 50 items from server";    
     
-    serviceProducts.list().success(function (stuff) {        
+    var onSuccess = function (stuff) {        
         console.debug('Success reading file!', stuff);        
         $scope.itemList = stuff.hits.hits;        
-    })
+    };
     
-    .error(function () {        
+    var onError = function () {        
         console.error('File not found!');        
-    });
+    };
+    
+    serviceProducts.list().then(onSuccess, onError);
     
 }]);
 
