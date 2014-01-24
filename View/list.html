@@ -1,10 +1,14 @@
 <!--<h4 id="Back" ng-click='goTo("/home")'>Back</h4>-->
 <div id="list">
-<div class="topcoat-list">
+    <div class="topcoat-list">
         <h3 class="topcoat-list__header" ng-bind="title"></h3>
         <ul class="topcoat-list__container">
             <li class="topcoat-list__item" ng-repeat="item in itemList">
-                <span ng-bind="item._source.name"></span>
+                
+                <div data-tap-anim>
+                    <span ng-bind="item._source.name"></span>
+                </div>
+                
             </li>
         </ul>
     </div>

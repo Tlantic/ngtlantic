@@ -22,3 +22,16 @@ h1{
 #Back:hover{
     color: white;
 }
+
+.animated {
+    position: relative;
+    left : 0%;
+    height: 20px;
+    transition: all 0.3s linear;
+}
+
+.animated.expanded {
+    height: 60px;
+    left: 50%;
+    color: pink;
+}
