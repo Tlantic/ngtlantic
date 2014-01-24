@@ -33,6 +33,19 @@ angular.module('ngtlantic').service('serviceProducts',["$http", "$q", function($
     
     
     this.search = function(text){
-        return  send('http://10.51.100.5:9200/salesptpt/items/_search?q=name:' + text);
+        
+        p= $q.defer();
+                
+        send('http://10.51.100.5:9200/salesptpt/items/_search?q=name:' + text).success(
+            function (result){
+                p.resolve(result);
+            }
+        ).error(
+            function(){
+                p.reject();
+            }
+        );
+        
+        return p.promise;
     };
-}]);
+}]);//fim angular.module
