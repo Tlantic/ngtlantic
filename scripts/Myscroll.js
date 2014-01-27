@@ -5,8 +5,9 @@ angular.module('ngtlantic').directive("myScroll",function(){
         
         angular.element(window).bind('scroll', function() {
             
-            console.log(this.pageYOffset);  
-            
+            if (elm[0].scrollTop >=  (elm[0].offsetHeight - (window.innerHeight + 10))) {
+                alert('FIM!');
+            }
         });
     };    
 });
