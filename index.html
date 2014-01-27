@@ -4,7 +4,7 @@
         <link rel ="stylesheet" type="text/css" href="bower_components/topcoat/css/topcoat-mobile-dark.css">
         <link rel ="stylesheet" type="text/css" href="View/css/estilo.css">
     </head>
-    <body ng-controller="rootController">
+    <body ng-controller="rootController" my-scroll>
         <div id="center">
             <button class="topcoat-button" ng-click='goTo("/search")'>Pesquisar</button>
             <button class="topcoat-button" ng-click='goTo("/list")'>Listar Produtos</button>
@@ -21,6 +21,7 @@
         <script src="Control/resultController.js"></script>
         
         <script src="scripts/tapAnim.js"></script>
+        <script src="scripts/Myscroll.js"></script>
         
     </body>
 </html>

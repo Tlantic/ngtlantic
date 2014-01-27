@@ -6,7 +6,6 @@ angular.module("ngtlantic").directive("tapAnim", function () {
         elm.addClass("animated");
         
         elm.bind("click", function () {
-            
             if (elm.hasClass("expanded")) {
                 elm.removeClass("expanded");
             } else {
