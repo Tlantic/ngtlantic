@@ -1,0 +1,54 @@
+POST /_search
+{
+    "aggs": {
+    "group_by_year": {
+      "terms": {
+        "field": "ano"
+      }
+    }
+  }
+}
+
+POST /_search
+{
+       "query": {
+      "filtered": {
+         "filter": {
+            "bool": {
+               "must": [
+                  {
+                     "term": {
+                        "ano": "2013"
+                     }
+                  }
+                ]
+            }
+         }
+      }
+   },
+"aggs" : {
+        "years" : {
+            "terms" : {
+                "field" : "ano"
+            },
+            "aggs" : {
+                "meses" : { 
+                   "terms" : {
+                          "field" : "mes" 
+                    }
+                }
+            }
+        }
+    }
+}
+
+POST /_search
+{
+    "aggs": {
+    "group_by_year": {
+      "terms": {
+        "field": "tipo_acid"
+      }
+    }
+  }
+}
